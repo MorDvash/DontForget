@@ -1,0 +1,44 @@
+{
+  "name": "weather-app",
+  "version": "0.0.1",
+  "description": "A Quasar Framework app",
+  "productName": "WeatherApp",
+  "author": "mor <mordvash1@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "icons": "icongenie generate -i app-icon.png --theme-color 4ca1af --skip-trim"
+  },
+  "dependencies": {
+    "@quasar/extras": "~1.9.12",
+    "axios": "~0.21.1",
+    "core-js": "~3.8.2",
+    "firebase": "~8.2.1",
+    "font-awesome": "~4.7.0",
+    "quasar": "~1.15.0",
+    "vue-browser-geolocation": "^1.8.0",
+    "vue-i18n": "~8.22.2",
+    "vue-router": "~3.4.9",
+    "vue2-google-maps": "^0.10.7",
+    "vuelidate": "~0.7.6"
+  },
+  "devDependencies": {
+    "@quasar/app": "~2.1.14"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

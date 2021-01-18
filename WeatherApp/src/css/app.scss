@@ -1,0 +1,18 @@
+// app global css in SCSS form
+.headerTitle{
+  font-family: 'Permanent Marker', cursive;
+}
+.backGroundApp{
+  background: linear-gradient(to bottom,
+    #4ca1af, #c4e0e5)
+}
+.pac-container{
+  z-index: 99999
+}
+.pac-item-query{
+  color: #4ca1af;
+}
+.text-strikethrough{
+  text-decoration: line-through;
+}
+
