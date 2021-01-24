@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {mapActions} from "vuex";
+import {mapActions, mapMutations} from "vuex";
 import ChangeLangButton from "components/ChangeLangButton/ChangeLangButton";
 
 export default {
@@ -21,9 +21,11 @@ export default {
   },
   methods: {
     ...mapActions("user" , ['signOut']),
+    ...mapMutations('user',['insertMainLayOut']),
     logOut(){
       const self = this
       this.signOut().then(() =>{
+        this.insertMainLayOut()
         self.$router.push({name: 'login'})
       })
     }

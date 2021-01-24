@@ -22,8 +22,9 @@
 
 <script>
 import DailogTask from "components/VacationsComponents/DailogTask";
-import {mapActions, mapGetters, mapMutations} from "vuex";
+import {mapActions, mapGetters, mapMutations ,mapState} from "vuex";
 import SlideItem from "components/VacationsComponents/SlideItem";
+
 
 export default {
   name: "VacationsPage",
@@ -35,6 +36,10 @@ export default {
     }
   },
   created() {
+    this.$i18n.locale = this.settings.lang
+    import('quasar/lang/' + this.settings.lang).then(lang => {
+      this.$q.lang.set(lang.default)
+    })
     if (this.vacations.length === 0) {
       this.$q.loading.show()
       this.getVacations().then(() =>{
@@ -42,17 +47,18 @@ export default {
       })
     }
     if (this.mainLayOut){
-      this.insertMainLayOut(this.mainLayOut)
+      this.insertMainLayOut()
     }
   },
   computed : {
     ...mapGetters('vacations', ['vacations']),
-    ...mapGetters('user', ['mainLayOut']),
+    ...mapState('user', ['mainLayOut' , 'settings']),
   },
   methods: {
     ...mapActions('vacations', ['getVacations']),
     ...mapMutations("user" , ['insertMainLayOut']),
-  }
+  },
+
 
 }
 </script>

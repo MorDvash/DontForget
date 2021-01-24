@@ -46,5 +46,14 @@ export default {
   sure : 'האם אתה בטוח?',
   alert :'התראה',
   deleted: 'החופשה נמחקה',
-  pleaseEnterUserVacation: 'הכנס בבקשה חופשה'
+  pleaseEnterUserVacation: 'הכנס בבקשה חופשה',
+  Tasks : 'משימות',
+  CompletedTasks :'משימות שהושלמו',
+  noTasks : 'אין יותר משימות!',
+  addTasks : 'הוסף משימה',
+  search: 'חיפוש',
+  noSearch:'אין תוצאות חיפוש',
+  deletethisTask :'האם למחוק את המשימה?',
+  areYouSure:'האם אתה בטוח שאתה רוצה למחוק את המשימה?'
+
 };

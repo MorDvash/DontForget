@@ -5,8 +5,9 @@ export default {
     userName: ''
   },
   settings: {
-    mode: 'light',
-    lang: 'he',
+    mode: '',
+    lang: 'en-us',
   },
-  mainLayOut : false
+  mainLayOut : false,
+  TaskFotter : false
 }

@@ -6,12 +6,12 @@ export default {
       from: '',
       to: ''
     },
-    vacationID: ''
+    vacationID: null
   },
-  tasks:[],
+  search :'',
   SkiEquipment:[],
   clothing:[],
   BathroomUtensils:[],
   general:[],
-  FlightEquipment:[]
+  FlightEquipment:[],
 }

@@ -28,8 +28,8 @@
 
 <script>
 
-import Inputs from "components/Inputs/Inputs";
-import {mapActions} from "vuex";
+import Inputs from "components/Inputs/InputsLogin&Register";
+import {mapActions, mapGetters, mapState} from "vuex";
 import ChangeLangButton from "components/ChangeLangButton/ChangeLangButton";
 
 export default {
@@ -42,6 +42,15 @@ export default {
         password: '',
       },
     }
+  },
+  created() {
+    this.$i18n.locale = this.settings.lang
+    import('quasar/lang/' + this.settings.lang).then(lang => {
+      this.$q.lang.set(lang.default)
+    })
+  },
+  computed : {
+    ...mapState('user', ['settings']),
   },
   methods: {
     ...mapActions('user', [ 'userLogin', 'forgetPassword']),

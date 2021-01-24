@@ -9,5 +9,6 @@ export default {
       }
     }
   },
-  insertMainLayOut: (state ,mainLayOut ) => state.mainLayOut= !mainLayOut,
+  insertMainLayOut: (state) => state.mainLayOut= !state.mainLayOut,
+  insertAddTask: (state) => state.TaskFotter= !state.TaskFotter,
 }

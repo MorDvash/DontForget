@@ -2,7 +2,7 @@ const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    redirect: '/Vacations',
+    redirect: '/login-page',
     meta: {authNotRequired: false},
     children: [
       {
@@ -13,7 +13,7 @@ const routes = [
       },
       {
         name: 'setting',
-        path: 'setting',
+        path: 'setting/:id',
         component: () => import('pages/Settings/Settings.vue'),
         meta: {authNotRequired: false}
       },
@@ -24,6 +24,7 @@ const routes = [
         meta: {authNotRequired: false},
       },
       {
+        name: 'task',
         path: 'sky-check/:id/tasks/:key',
         component: () => import('pages/TodoList/Tasks.vue'),
         meta: {authNotRequired: false}

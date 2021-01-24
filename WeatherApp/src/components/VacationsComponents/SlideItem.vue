@@ -23,7 +23,7 @@
         <q-icon color="primary" name="place"/>
       </q-item-section>
       <q-item-section> {{ vacation.placeName }}</q-item-section>
-      <q-item-section> {{ vacation.rangeDate.from }} {{ vacation.rangeDate.to }}</q-item-section>
+      <q-item-section> {{ vacation.rangeDate.from | niceDate }}-{{ vacation.rangeDate.to | niceDate }}</q-item-section>
     </q-item>
   </q-slide-item>
 
@@ -31,6 +31,7 @@
 
 <script>
 import {mapActions, mapGetters , mapMutations} from "vuex";
+import {date} from "quasar";
 
 export default {
   name: "SlideItem",
@@ -66,7 +67,7 @@ export default {
     },
 
     onRight() {
-      this.insertMainLayOut(this.mainLayOut)
+      this.insertMainLayOut()
       this.setVacation(this.vacation)
         this.$router.push({name : 'sky-check' , params:{id:`${this.vacation.vacationID}`}}).catch(()=>{});
     },
@@ -78,6 +79,11 @@ export default {
   },
   beforeDestroy() {
     clearTimeout(this.timer)
+  },
+  filters:{
+    niceDate(value){
+      return date.formatDate(value , 'DD/MM/YY')
+    }
   }
 }
 </script>

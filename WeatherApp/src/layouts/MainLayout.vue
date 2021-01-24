@@ -20,43 +20,28 @@
       </q-toolbar>
     </q-header>
 
-    <q-footer v-if="this.$q.platform.is.mobile && mainLayOut"
-              bordered class="bg-white text-primary ">
-      <q-tabs
-        no-caps
-        dense
-        class="bg-grey-2 text-primary"
-      >
-        <q-route-tab
-          v-for="link in essentialLinks"
-          :key="link.key"
-          :icon="link.icon"
-          :label="link.title"
-          :to="link.link"
-        />
-      </q-tabs>
-    </q-footer>
+    <lay-out-for-mobile v-if="this.$q.platform.is.mobile && mainLayOut"/>
 
-    <q-drawer v-if="this.$q.platform.is.desktop "
-              v-model="leftDrawerOpen"
-              show-if-above
-              bordered
-              content-class="bg-grey-1"
-    >
-      <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
-        >
-          Essential Links
-        </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
+<!--    <q-drawer v-if="this.$q.platform.is.desktop "-->
+<!--              v-model="leftDrawerOpen"-->
+<!--              show-if-above-->
+<!--              bordered-->
+<!--              content-class="bg-grey-1"-->
+<!--    >-->
+<!--      <q-list>-->
+<!--        <q-item-label-->
+<!--          header-->
+<!--          class="text-grey-8"-->
+<!--        >-->
+<!--          Essential Links-->
+<!--        </q-item-label>-->
+<!--        <EssentialLink-->
+<!--          v-for="link in essentialLinks"-->
+<!--          :key="link.title"-->
+<!--          v-bind="link"-->
+<!--        />-->
+<!--      </q-list>-->
+<!--    </q-drawer>-->
 
     <q-page-container>
       <router-view/>
@@ -65,39 +50,18 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
-import {mapGetters} from "vuex";
+import EssentialLink from 'components/LayOut/EssentialLink.vue'
+import LayOutForMobile from "components/LayOut/LayOutForMobile";
+import {mapGetters, mapState} from "vuex";
 
 
 export default {
   name: 'MainLayout',
-  components: {EssentialLink},
+  components: {LayOutForMobile, EssentialLink},
   data() {
     return {
+      text: '',
       leftDrawerOpen: false,
-      essentialLinks: [
-        {
-          title: this.$t('skyList'),
-          caption: '',
-          key: 'sky',
-          icon: 'fas fa-list-ul',
-          link: `/sky-check/${this.$route.params.id}`
-        },
-        {
-          title: this.$t('Weather'),
-          caption: '',
-          key: 'weather',
-          icon: 'fas fa-cloud-sun',
-          link: `/weather/${this.$route.params.id}`
-        },
-        {
-          title: this.$t('Setting'),
-          caption: '',
-          key: 'Settings',
-          icon: 'settings',
-          link: '/setting'
-        },
-      ]
     }
   },
   computed: {

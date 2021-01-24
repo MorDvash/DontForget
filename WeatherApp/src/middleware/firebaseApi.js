@@ -7,7 +7,7 @@ import firestoreRefs from "src/middleware/firesoreRefs";
 
 export default {
   setDocument, getDocument, createNewVacation, DeleteVacationFunction,
-
+  updateTasks , deleteDocument , updateDocument
 }
 
 async function setDocument(ref, data) {
@@ -17,6 +17,12 @@ async function setDocument(ref, data) {
 async function getDocument(ref) {
   const doc = await ref.get();
   return ref._.type === "document" ? doc.data() : doc;
+}
+async function deleteDocument(ref) {
+  ref.delete();
+}
+async function updateDocument(ref , data) {
+  ref.update(data);
 }
 
 async function createNewVacation(vacation) {
@@ -31,4 +37,11 @@ async function DeleteVacationFunction(vacationId) {
     .httpsCallable("deleteVacation");
   return await deleteVacation(vacationId);
 }
+
+async function updateTasks(tasksData) {
+  const updateTasks = await firebaseInstance.firebase.app().functions("europe-west1")
+    .httpsCallable("updateTasks");
+  return await updateTasks(tasksData);
+}
+
 

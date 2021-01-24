@@ -46,5 +46,14 @@ export default {
   sure :'are you sure?',
   alert :'Alert',
   deleted: 'The vacation has been deleted',
-  pleaseEnterUserVacation : 'Please enter vacation'
+  pleaseEnterUserVacation : 'Please enter vacation',
+  Tasks : 'Tasks',
+  CompletedTasks :'Completed Tasks',
+  noTasks: 'No tasks to do!',
+  addTasks:'Add task ',
+  search : 'search',
+  noSearch: 'No search result',
+  deletethisTask:'Delete This Task?',
+  areYouSure: 'Are you sure you want delete this task?'
+
 }

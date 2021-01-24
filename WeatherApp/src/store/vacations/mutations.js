@@ -15,11 +15,21 @@ export default {
     state.vacation = vacation
   },
   taskCompleted: (state , {task , nameTasks}) =>{
-    const index = state[nameTasks].findIndex(p => p.taskID === task.taskID)
-    state[nameTasks][index].completed = true
+    const index = state[nameTasks.key].findIndex(p => p.taskID === task.taskID)
+    state[nameTasks.key][index].completed = true
+  },
+  taskUnCompleted: (state , {task , nameTasks}) =>{
+    const index = state[nameTasks.key].findIndex(p => p.taskID === task.taskID)
+    state[nameTasks.key][index].completed = false
   },
   deleteTask : (state , data) =>{
-    const index = state[data.nameTasks].findIndex(p => p.taskID === data.task.taskID)
-    Vue.delete(state[data.nameTasks] , index)
-  }
+    let index = state[data.nameTasks.key].findIndex(p => p.taskID === data.task.taskID)
+    Vue.delete(state[data.nameTasks.key] , index)
+  },
+  instertTask: (state, taskData) => {
+    state[taskData.nameTasks.key].push(taskData.task)
+  },
+  instertSearch: (state, search) => {state.search = search},
+  editTask: (state, search) => {state.addTask = search},
+
 }

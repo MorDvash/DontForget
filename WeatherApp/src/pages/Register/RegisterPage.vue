@@ -45,7 +45,7 @@
 
 <script>
 import ChangeLangButton from "../../components/ChangeLangButton/ChangeLangButton"
-import Inputs from "components/Inputs/Inputs";
+import Inputs from "components/Inputs/InputsLogin&Register";
 import {alphaNum, minLength} from "vuelidate/lib/validators";
 import {mapActions} from "vuex";
 
@@ -61,7 +61,6 @@ export default {
       },
     }
   },
-
   methods : {
     ...mapActions('user', ['passwordRegister']),
     pushToLoginPage() {

@@ -1,6 +1,6 @@
 import loginFuncs from "src/middleware/loginFuncs";
 import firebaseInstance from "../../middleware/firebase";
-import {LocalStorage , Loading} from 'quasar'
+import {Loading} from 'quasar'
 
 
 export default {
@@ -38,7 +38,8 @@ export default {
   handleAuthStateChanged: async () => {
     firebaseInstance.firebase.auth().onAuthStateChanged(user => {
         Loading.hide()
-        LocalStorage.set('user', user)
+      window.user = user;
+      localStorage.setItem("user", JSON.stringify(user));
       })
   },
   signOut: async () => {

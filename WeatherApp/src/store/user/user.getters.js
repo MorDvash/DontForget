@@ -7,5 +7,8 @@ export default {
   },
   mainLayOut : (state) =>{
     return state.mainLayOut
+  },
+  TaskFotter : (state) =>{
+    return state.TaskFotter
   }
 }
