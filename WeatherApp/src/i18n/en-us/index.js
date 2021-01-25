@@ -54,6 +54,8 @@ export default {
   search : 'search',
   noSearch: 'No search result',
   deletethisTask:'Delete This Task?',
-  areYouSure: 'Are you sure you want delete this task?'
+  areYouSure: 'Are you sure you want delete this task?',
+  deletedTask:'The Task has been deleted',
+  addTask : ' Task has been added',
 
 }

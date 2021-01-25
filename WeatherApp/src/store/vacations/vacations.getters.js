@@ -1,6 +1,21 @@
 export default {
-  vacations : (state) =>{
+  vacationsFiltered: (state) =>{
+    let tasksFiltered = []
+    if (state.search) {
+      state.vacations.filter(vacation => {
+        let taskNameLowerCase = vacation.placeName.toLowerCase(),
+          searchLowerCase = state.search.toLowerCase()
+        if (taskNameLowerCase.includes(searchLowerCase)) {
+          tasksFiltered.push(vacation)
+        }
+      })
+      return tasksFiltered
+    }
     return state.vacations
+  },
+  vacations : (state , getters) =>{
+    let tasksFiltered = getters.vacationsFiltered
+    return tasksFiltered
   },
   vacation : (state) =>{
     return state.vacation

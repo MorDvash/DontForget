@@ -24,6 +24,12 @@ export default {
         cancel: true,
         position: 'bottom'
       }).onOk(() => {
+        this.$q.notify({
+          message:this.$t('deletedTask'),
+          icon: 'delete',
+          color: 'red',
+          timeout:'1000'
+        })
         this.deleteTask({
           task: task,
           nameTasks: this.$route.params, nameCompleted: this.$route.query

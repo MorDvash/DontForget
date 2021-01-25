@@ -1,7 +1,7 @@
 <template>
   <q-footer
             bordered class="bg-white text-primary ">
-    <addTask/>
+    <addTask />
     <q-tabs
       no-caps
       dense

@@ -30,6 +30,19 @@ export default {
     state[taskData.nameTasks.key].push(taskData.task)
   },
   instertSearch: (state, search) => {state.search = search},
+
   editTask: (state, search) => {state.addTask = search},
 
+  resetStateTask: (state) => {
+    state.SkiEquipment = []
+    state.clothing = []
+    state.BathroomUtensils = []
+    state.general = []
+    state.FlightEquipment = []
+    state.SkiEquipment = []
+    state.SkiEquipment = []
+  },
+  resetStateVacations: (state) =>{
+    state.vacations = []
+  }
 }

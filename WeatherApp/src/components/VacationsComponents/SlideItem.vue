@@ -41,8 +41,6 @@ export default {
   },
   computed: {
     ...mapGetters('user', ['settings' , 'mainLayOut']),
-    ...mapGetters('vacations', ['vacations']),
-
   },
   methods: {
     ...mapActions('vacations', ['deleteVacation']),
@@ -58,6 +56,7 @@ export default {
           message:this.$t('deleted'),
           icon: 'delete',
           color: 'red',
+          timeout:'1000'
         })
         this.deleteVacation(this.vacation.vacationID)
         this.finalize(reset)

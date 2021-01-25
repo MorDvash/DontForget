@@ -21,11 +21,9 @@ export default {
   },
   methods: {
     ...mapActions("user" , ['signOut']),
-    ...mapMutations('user',['insertMainLayOut']),
     logOut(){
       const self = this
       this.signOut().then(() =>{
-        this.insertMainLayOut()
         self.$router.push({name: 'login'})
       })
     }

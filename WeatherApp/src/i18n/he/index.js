@@ -54,6 +54,8 @@ export default {
   search: 'חיפוש',
   noSearch:'אין תוצאות חיפוש',
   deletethisTask :'האם למחוק את המשימה?',
-  areYouSure:'האם אתה בטוח שאתה רוצה למחוק את המשימה?'
+  areYouSure:'האם אתה בטוח שאתה רוצה למחוק את המשימה?',
+  deletedTask:'המשימה נמחקה',
+  addTask:'משימה הוספה'
 
 };

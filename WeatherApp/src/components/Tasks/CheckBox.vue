@@ -1,14 +1,14 @@
 <template>
   <q-page class="flex column backGroundApp">
-<!--    <edit-task @trunToFalse="d" :popup="popup" style="display: none"/>-->
+    <edit-task @trunToFalse="d" :popup="popup" style="display: none"/>
     <banner :title="title"/>
-    <SearchBar/>
+    <SearchBar :inputData="inputData"/>
     <transition
       appear
       enter-active-class="animated fadeInLeftBig"
     >
     <banner class="q-mt-lg" v-if="tasks.length === 0 && complete && !search" :title="Completed"/>
-    <banner class="q-mt-lg" v-if="tasks.length === 0 && search" :title="noSearch"/>
+    <banner  class="q-mt-lg" v-if="tasks.length === 0 && search" :title="noSearch"/>
     </transition>
 
     <q-list class="text-white" separator bordered>
@@ -54,6 +54,14 @@ export default {
       popup: {
         status: false
       },
+      inputData: {
+        bgColor: 'bg-primary text-white',
+        icon: 'search',
+        label: this.$t('search'),
+        function: 'search',
+        color: 'white',
+        labelColor: 'white'
+      },
       title: {
         msg: this.$route.query.sort,
         bgColor: 'bg-primary'
@@ -78,9 +86,10 @@ export default {
     ...mapActions('vacations', ['deleteTask', 'completedTask',]),
     ...mapMutations('vacations', ['editTask']),
     d() {
-      this.popup = false
+      this.popup.status = false
     },
     edit(task) {
+      debugger
       this.popup.task = task
       this.popup.status = true
     },

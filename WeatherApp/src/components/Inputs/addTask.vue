@@ -29,11 +29,14 @@ export default {
   methods: {
     ...mapActions('vacations', ["addTaskAction"]),
     action(){
-          this.$q.loading.show()
+      this.$q.notify({
+        message:this.$t('addTask'),
+        icon: 'done',
+        color: 'primary',
+        timeout:'1000'
+      })
           this.addTaskAction({nameTask : this.inputData.input , nameTasks: this.$route.params}).then(() =>{
-            debugger
             this.inputData.input = ''
-            this.$q.loading.hide()
         })
       }
     },

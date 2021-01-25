@@ -59,9 +59,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations('user',['insertAddTask']),
     goToTaks(key , query) {
-      this.insertAddTask()
       this.$router.push({ name : 'task' ,
         params:{ id : this.$route.params.id , key : key} ,
         query: { sort : query} })

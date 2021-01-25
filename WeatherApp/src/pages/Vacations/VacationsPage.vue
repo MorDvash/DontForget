@@ -3,20 +3,26 @@
     <h3 class="text-center text-white">{{ $t('vacationsList') }}</h3>
     <q-list
       v-if="vacations.length > 0"
-      bordered separator class="q-ma-md">
+       separator class="q-ma-md">
       <div v-for="vacation in vacations">
       <slide-item :vacation="vacation"/>
         <q-separator/>
       </div>
     </q-list>
+    <div class="absolute-bottom">
+      <div class="col">
     <q-btn round size="lg"
-           class="absolute-bottom-left q-ma-xs"
+           class="relative-position q-ma-xs "
            icon="fas fa-plus"
            color="primary" @click="addVaction = true" />
     <q-dialog v-model="addVaction">
       <dailog-task/>
     </q-dialog>
-
+      </div>
+      <div class="col">
+<search-bar :input-data="inputData"/>
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -24,15 +30,23 @@
 import DailogTask from "components/VacationsComponents/DailogTask";
 import {mapActions, mapGetters, mapMutations ,mapState} from "vuex";
 import SlideItem from "components/VacationsComponents/SlideItem";
+import SearchBar from "components/Inputs/SearchBar";
 
 
 export default {
   name: "VacationsPage",
-  components: {SlideItem, DailogTask},
+  components: {SearchBar, SlideItem, DailogTask},
   data(){
     return{
-      addVaction: false
-
+      addVaction: false,
+      inputData: {
+        bgColor: 'bg-primary text-white col',
+        icon: 'search',
+        label: this.$t('search'),
+        function: 'search',
+        color: 'white',
+        labelColor: 'white'
+      },
     }
   },
   created() {
@@ -49,6 +63,7 @@ export default {
     if (this.mainLayOut){
       this.insertMainLayOut()
     }
+    this.resetStateTask()
   },
   computed : {
     ...mapGetters('vacations', ['vacations']),
@@ -57,6 +72,7 @@ export default {
   methods: {
     ...mapActions('vacations', ['getVacations']),
     ...mapMutations("user" , ['insertMainLayOut']),
+    ...mapMutations("vacations" , ['resetStateTask']),
   },
 
 

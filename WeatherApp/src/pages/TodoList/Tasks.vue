@@ -50,6 +50,7 @@ export default {
     this.updateTasks({taskCompleted: this.tempTasks, params: this.$route.params, taskName: this.taskName})
   },
   created() {
+    this.insertAddTask()
     this.$q.loading.show()
     this.getTasks({params: this.$route.params, tasksCompleted: this.$route.query})
       .then((result) => {

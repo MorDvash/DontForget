@@ -1,19 +1,19 @@
 <template>
-  <q-input v-if="TaskFotter"
-           class="bg-primary text-white"
-           color="white"
-           label-color="white"
+  <q-input :class="inputData.bgColor"
+           :color="inputData.color"
+           :label-color="inputData.labelColor"
            clearable
            rounded
            outlined
            v-model="searcField"
-           :label="$t('search')"
+           :label="inputData.label"
            @keyup.esc="searcField = ''"
   >
     <template v-slot:append>
       <q-icon
-        name="search"
-        color="white"
+        :name="inputData.icon"
+        :color="inputData.color"
+
         class="cursor-pointer"/>
     </template>
   </q-input>
@@ -25,12 +25,12 @@ import InputText from "components/Inputs/InputText";
 
 export default {
   name: "SearchBar",
+  props:['inputData'],
   components: {InputText},
   data(){
     return{}
   },
   computed:{
-    ...mapGetters('user', ['TaskFotter']),
     ...mapState('vacations', ['search']),
     searcField : {
       get(){

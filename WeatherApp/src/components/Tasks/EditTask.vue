@@ -6,11 +6,11 @@
       </q-card-section>
 
       <q-card-section class="q-pt-none">
-        <q-input dense v-model="popup.task.taskName" autofocus @keyup.enter="popup = false" />
+        <q-input dense v-model="popup.task.nameTask" autofocus @keyup.enter="popup = false" />
       </q-card-section>
 
       <q-card-actions align="right" class="text-primary">
-        <q-btn flat label="Cancel"  @click="$emit('trunToFalse')"  />
+        <q-btn flat label="Cancel"   @click="$emit('trunToFalse')"  />
         <q-btn flat label="Add address"  @click="$emit('trunToFalse')" />
       </q-card-actions>
     </q-card>

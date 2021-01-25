@@ -14,7 +14,7 @@
         <q-input outlined class="row q-mb-md"
                  ref="Qautocomplete"
                  autofocus
-                 v-model="vacation.placeName"
+                 :value="vacation.placeName"
                  :label="$t('location')"
                  :rules="[ val => !!val || $t('pleaseEnterUserVacation'),]"
         >
@@ -53,29 +53,29 @@ export default {
       }
     }
   },
-  // mounted() {
-  //   const input = document.getElementById(this.$refs.Qautocomplete.$refs.input.id);
-  //   const autocomplete = new google.maps.places.Autocomplete(input,
-  //     {
-  //       bounds : new google.maps.LatLngBounds(
-  //         new google.maps.LatLng(41.89193, 12.51133)
-  //       )
-  //     }
-  //   )
-  //   autocomplete.addListener("place_changed" , ()=> {
-  //     this.vacation.placeName = autocomplete.getPlace().formatted_address;
-  //   })
-  // },
-  methods: {
-    ...mapActions("vacations" ,["InsertVacation"]),
+  mounted() {
+    let defaultBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(41.89193, 12.51133));
 
+    let input = document.getElementById(this.$refs.Qautocomplete.$refs.input.id);
+    let options = {
+      bounds: defaultBounds,
+      types: ['address']
+    };
+    let autocomplete = new google.maps.places.Autocomplete(input, options);
+      autocomplete.addListener("place_changed" , ()=> {
+        this.vacation.placeName = autocomplete.getPlace().formatted_address;
+      })
+  },
+  methods: {
+    ...mapActions("vacations", ["InsertVacation"]),
     options(dateRange) {
       let timeStamp = Date.now()
       return dateRange >= date.formatDate(timeStamp, 'YYYY/MM/DD')
     },
     save() {
       this.$q.loading.show()
-      this.InsertVacation(this.vacation).then(() =>{
+      this.InsertVacation(this.vacation).then(() => {
         this.$q.loading.hide()
       })
     },
