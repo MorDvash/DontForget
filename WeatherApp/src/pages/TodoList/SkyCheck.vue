@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import {mapActions, mapGetters, mapMutations} from "vuex";
+import {mapState ,mapActions} from "vuex";
 
 export default {
   name: "TodoList",
@@ -53,12 +53,16 @@ export default {
       ]
     }
   },
-
-  computed: {
-    ...mapGetters('vacations', ['vacation']),
+  created(){
+    if(this.mainLayOut === false)
+    this.fotterStatus('mainLayOut')
   },
-
+  computed: {
+    ...mapState('vacations', ['vacation']),
+    ...mapState('user', ['mainLayOut']),
+  },
   methods: {
+    ...mapActions('user',['fotterStatus']),
     goToTaks(key , query) {
       this.$router.push({ name : 'task' ,
         params:{ id : this.$route.params.id , key : key} ,

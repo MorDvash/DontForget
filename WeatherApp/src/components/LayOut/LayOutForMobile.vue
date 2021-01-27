@@ -1,6 +1,6 @@
 <template>
   <q-footer
-            bordered class="bg-white text-primary ">
+    bordered class="bg-white text-primary ">
     <addTask />
     <q-tabs
       no-caps

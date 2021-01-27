@@ -57,5 +57,22 @@ export default {
   areYouSure: 'Are you sure you want delete this task?',
   deletedTask:'The Task has been deleted',
   addTask : ' Task has been added',
+  Settings:'Settings',
+  AccountProfile:'Account Profile',
+  lang:'Language',
+  Content:'Contact Us',
+  Info:'Information',
+  Mode:'Display Mode',
+  resetPass:'Reset Password',
+  deleteAccount:'Delete Account',
+  logout:'Sign Out',
+  english:'English',
+  hebrew:'Hebrew',
+  ContentWithWhatsapp:'Whatsapp us',
+  ContentWithFacebook:'Facebook us',
+  ContentWithEmail:'Email us',
+  lightMode:'Light Mode',
+  darkMode:'Dark Mode',
+  deleteAccountMessage: 'Are you sure you want delete this account?'
 
 }

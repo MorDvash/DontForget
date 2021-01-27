@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import {mapActions, mapGetters , mapMutations} from "vuex";
+import {mapActions, mapGetters, mapMutations, mapState} from "vuex";
 import {date} from "quasar";
 
 export default {
@@ -40,12 +40,11 @@ export default {
     return {}
   },
   computed: {
-    ...mapGetters('user', ['settings' , 'mainLayOut']),
+    ...mapState('user', ['settings' , 'mainLayOut']),
   },
   methods: {
     ...mapActions('vacations', ['deleteVacation']),
     ...mapMutations("vacations" , ['setVacation']),
-    ...mapMutations("user" , ['insertMainLayOut']),
     onLeft({reset}) {
       this.$q.dialog({
         title: this.$t('alert'),
@@ -66,9 +65,8 @@ export default {
     },
 
     onRight() {
-      this.insertMainLayOut()
       this.setVacation(this.vacation)
-        this.$router.push({name : 'sky-check' , params:{id:`${this.vacation.vacationID}`}}).catch(()=>{});
+        this.$router.push({name : 'sky-check' , params:{id:`${this.vacation.vacationID}`}})
     },
     finalize(reset) {
       this.timer = setTimeout(() => {

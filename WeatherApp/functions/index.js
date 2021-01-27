@@ -130,9 +130,7 @@ exports.createVacation = functions.region("europe-west1")
     return vacation
   })
 
-exports.deleteVacation = functions.region("europe-west1").https.onCall(async (vacationId, context) => {
-  const uid = context.auth.uid;
-  const path = `users/${uid}/vacations/${vacationId}`;
+exports.deleteCollection = functions.region("europe-west1").https.onCall(async (path, context) => {
   await firebase_tools.firestore.delete(path, {
     project: process.env.GCLOUD_PROJECT,
     recursive: true,

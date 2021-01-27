@@ -28,7 +28,7 @@
 
 <script>
 import DailogTask from "components/VacationsComponents/DailogTask";
-import {mapActions, mapGetters, mapMutations ,mapState} from "vuex";
+import {mapActions, mapGetters, mapMutations} from "vuex";
 import SlideItem from "components/VacationsComponents/SlideItem";
 import SearchBar from "components/Inputs/SearchBar";
 
@@ -50,24 +50,16 @@ export default {
     }
   },
   created() {
-    this.$i18n.locale = this.settings.lang
-    import('quasar/lang/' + this.settings.lang).then(lang => {
-      this.$q.lang.set(lang.default)
-    })
     if (this.vacations.length === 0) {
       this.$q.loading.show()
       this.getVacations().then(() =>{
         this.$q.loading.hide()
       })
     }
-    if (this.mainLayOut){
-      this.insertMainLayOut()
-    }
     this.resetStateTask()
   },
   computed : {
     ...mapGetters('vacations', ['vacations']),
-    ...mapState('user', ['mainLayOut' , 'settings']),
   },
   methods: {
     ...mapActions('vacations', ['getVacations']),

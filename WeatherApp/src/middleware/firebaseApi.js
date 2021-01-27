@@ -6,7 +6,7 @@ import firestoreRefs from "src/middleware/firesoreRefs";
 
 
 export default {
-  setDocument, getDocument, createNewVacation, DeleteVacationFunction,
+  setDocument, getDocument, createNewVacation, deleteCollection,
   updateTasks , deleteDocument , updateDocument
 }
 
@@ -32,10 +32,10 @@ async function createNewVacation(vacation) {
 
 }
 
-async function DeleteVacationFunction(vacationId) {
-  const deleteVacation = await firebaseInstance.firebase.app().functions("europe-west1")
-    .httpsCallable("deleteVacation");
-  return await deleteVacation(vacationId);
+async function deleteCollection(path) {
+  const deleteCollection = await firebaseInstance.firebase.app().functions("europe-west1")
+    .httpsCallable("deleteCollection");
+  return await deleteCollection(path);
 }
 
 async function updateTasks(tasksData) {

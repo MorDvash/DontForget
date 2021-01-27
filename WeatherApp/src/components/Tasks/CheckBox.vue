@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex column backGroundApp">
-    <edit-task @trunToFalse="d" :popup="popup" style="display: none"/>
+<!--    <edit-task @trunToFalse="closeDailog" :popup="popup" style="display: none"/>-->
     <banner :title="title"/>
     <SearchBar :inputData="inputData"/>
     <transition
@@ -23,7 +23,6 @@
             class="no-pointer-events"
             :value="task.completed"/>
         </q-item-section>
-        <!--        v-touch-hold:1000.mouse="edit(task)"-->
         <q-item-section>
           <q-item-label :class="{'text-strikethrough' : task.completed}">
             {{ task.nameTask }}
@@ -32,6 +31,7 @@
         <q-item-section side>
           <delete-btn :task="task"/>
         </q-item-section>
+
       </q-item>
     </q-list>
 
@@ -85,11 +85,10 @@ export default {
   methods: {
     ...mapActions('vacations', ['deleteTask', 'completedTask',]),
     ...mapMutations('vacations', ['editTask']),
-    d() {
+    closeDailog() {
       this.popup.status = false
     },
     edit(task) {
-      debugger
       this.popup.task = task
       this.popup.status = true
     },

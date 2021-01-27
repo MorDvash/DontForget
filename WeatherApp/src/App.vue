@@ -4,18 +4,22 @@
   </div>
 </template>
 <script>
-import {mapActions} from "vuex";
+import {mapActions, mapState} from "vuex";
 
 export default {
   name: 'App',
-  data(){
-    return{}
+  computed : {
+    ...mapState('user', ['settings']),
   },
   methods :{
-    ...mapActions('user', ['handleAuthStateChanged'])
+    ...mapActions('user', ['getFromLocalStorage'])
   },
-  mounted() {
-    this.handleAuthStateChanged()
+  created() {
+    this.getFromLocalStorage('settings')
+    this.getFromLocalStorage('user')
+    this.getFromLocalStorage('mainLayOut')
+    this.getFromLocalStorage('TaskFotter')
   }
 }
 </script>
+

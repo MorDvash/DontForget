@@ -31,7 +31,7 @@
 
 <script>
 import CheckBox from "components/Tasks/CheckBox";
-import {mapActions, mapGetters, mapMutations, mapState} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 import DailogTask from "components/VacationsComponents/DailogTask";
 
 export default {
@@ -46,11 +46,11 @@ export default {
     }
   },
   beforeDestroy() {
-    this.insertAddTask()
+    this.fotterStatus('TaskFotter')
     this.updateTasks({taskCompleted: this.tempTasks, params: this.$route.params, taskName: this.taskName})
   },
   created() {
-    this.insertAddTask()
+    this.fotterStatus('TaskFotter')
     this.$q.loading.show()
     this.getTasks({params: this.$route.params, tasksCompleted: this.$route.query})
       .then((result) => {
@@ -68,8 +68,8 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('user',['insertAddTask']),
     ...mapActions('vacations', ['getTasks', 'updateTasks']),
+    ...mapActions('user', ['fotterStatus']),
   }
 }
 </script>

@@ -9,7 +9,9 @@ export default {
       }
     }
   },
-  insertMainLayOut: (state) => state.mainLayOut = !state.mainLayOut,
-
-  insertAddTask: (state) => state.TaskFotter= !state.TaskFotter,
+  insertFotterStatus: (state , stateName) => {
+    state[stateName] = !state[stateName]
+  },
+  changeLang:(state , lang) => state.settings.lang = lang,
+  insertStateFronLocalStorage:(state , data) => Object.assign(state[data.stateName] , data.value)
 }

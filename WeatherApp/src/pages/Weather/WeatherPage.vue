@@ -1,7 +1,7 @@
 <template>
   <q-page class="flex column" :class="bgClass">
     <div class="col q-pt-lg q-px-md">
-    <q-input v-model="search" :placeholder="search" @keyup.enter="getWeatherBySearch"  dark>
+    <q-input v-model="search" :placeholder="search" @keyup.enter="getWeatherBySearch">
       <template v-slot:before>
         <q-icon name="my_location" @click="getMyLocation" />
       </template>

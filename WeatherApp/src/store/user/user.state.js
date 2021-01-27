@@ -5,7 +5,7 @@ export default {
     userName: ''
   },
   settings: {
-    mode: '',
+    mode: 'light',
     lang: 'en-us',
   },
   mainLayOut : false,

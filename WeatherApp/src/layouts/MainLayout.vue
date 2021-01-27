@@ -15,8 +15,6 @@
         <q-toolbar-title class="text-teal absolute-center headerTitle">
           Dont forget
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -64,8 +62,14 @@ export default {
       leftDrawerOpen: false,
     }
   },
+  created() {
+    this.$i18n.locale = this.settings.lang
+    import('quasar/lang/' + this.settings.lang).then(lang => {
+      this.$q.lang.set(lang.default)
+    })
+  },
   computed: {
-    ...mapGetters('user', ['mainLayOut']),
+    ...mapState('user', ['mainLayOut' , 'settings']),
   },
 }
 </script>

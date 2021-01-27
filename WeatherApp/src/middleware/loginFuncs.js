@@ -67,10 +67,18 @@ async function resetPassword(email) {
       message.showErrorMessage(error.message)
   });
 }
+async  function deleteUser(){
+  let user = firebaseInstance.firebase.auth().currentUser;
+  await user.delete().then(function() {
+  }).catch(function(error) {
+    message.showErrorMessage(error.message)
+  });
+}
 
 export default {
   providerLogin,
   passwordLogin,
   signIn,
-  resetPassword
+  resetPassword,
+  deleteUser
 };

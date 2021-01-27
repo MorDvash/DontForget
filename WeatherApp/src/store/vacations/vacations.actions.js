@@ -15,9 +15,9 @@ export default {
       commit('setVacations', vacation)
     })
   },
-  deleteVacation: async ({commit}, vacationId) => {
+  deleteVacation: async ({commit , rootState}, vacationId) => {
     commit('deleteVacation', vacationId)
-    await firebaseApi.DeleteVacationFunction(vacationId)
+    await firebaseApi.deleteCollection(`users/${rootState.user.user.uid}/vacations/${vacationId}`)
   },
   getTasks: async ({commit, rootState, state}, data) => {
     if (state[data.params.key].length === 0) {

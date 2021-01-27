@@ -1,7 +1,9 @@
 <template>
   <q-btn
     @click.stop="deleted(task)"
-    flat round
+    flat
+    round
+    dense
     color="red"
     icon="delete"/>
 </template>

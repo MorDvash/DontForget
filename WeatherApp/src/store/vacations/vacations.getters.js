@@ -17,12 +17,6 @@ export default {
     let tasksFiltered = getters.vacationsFiltered
     return tasksFiltered
   },
-  vacation : (state) =>{
-    return state.vacation
-  },
-  tasks : (state) =>{
-    return state.tasks
-  },
   tasksFiltered: (state) => (data) => {
     let tasksFiltered = []
     if (state.search) {

@@ -56,6 +56,23 @@ export default {
   deletethisTask :'האם למחוק את המשימה?',
   areYouSure:'האם אתה בטוח שאתה רוצה למחוק את המשימה?',
   deletedTask:'המשימה נמחקה',
-  addTask:'משימה הוספה'
+  addTask:'משימה הוספה',
+  Settings: 'הגדרות',
+  AccountProfile:'פרופיל',
+  lang:'שפה',
+  Content:'צור קשר',
+  Info:'מידע',
+  Mode:'מצב תצוגה',
+  resetPass:'איפוס סיסמא',
+  deleteAccount:'מחיקת חשבון',
+  logout:'התנתקות',
+  english:'אנגלית',
+  hebrew:'עברית',
+  ContentWithWhatsapp:'צור קשר אמצעות Whatsapp',
+  ContentWithFacebook:'צור קשר באמצעות Facebook',
+  ContentWithEmail:'צור קשר באמצעות Email',
+  lightMode:'מצב בהיר',
+  darkMode:'מצב כהה',
+  deleteAccountMessage:'אתה בטוח רוצה למחוק את המשתמש?'
 
 };
