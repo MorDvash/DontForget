@@ -1,5 +1,4 @@
 const functions = require('firebase-functions');
-const nodemailer = require('nodemailer');
 const admin = require('firebase-admin');
 const firebase_tools = require("firebase-tools");
 
@@ -111,7 +110,6 @@ exports.deleteCollection = functions.region("europe-west1").https.onCall(async (
     project: process.env.GCLOUD_PROJECT,
     recursive: true,
     yes: true
-    // token: functions.config().fb.token
   });
 });
 exports.updateTasks = functions.region("europe-west1").https.onCall(async (tasksData, context) => {
