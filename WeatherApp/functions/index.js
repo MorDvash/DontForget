@@ -86,30 +86,6 @@ const todos = [
     {nameTask: 'Wallet + credit Card + drivers license', completed :false},
   ]
 ]
-// const gmailEmail = functions.config().gmail.email;
-// const gmailPassword = functions.config().gmail.password;
-// const mailTransport = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: gmailEmail,
-//     pass: gmailPassword,
-//   },
-// });
-// const APP_NAME = 'DontForget'
-
-// exports.sendWelcomeEmail = functions.auth.user().onCreate(async (user) => {
-//   const email = user.email;
-//   const displayName = user.displayName;
-//
-//   const mailOptions = {
-//     from: `${APP_NAME} <noreply@firebase.com>`,
-//     to: email,
-//   }
-//     mailOptions.subject = `Welcome to ${APP_NAME}!`;
-//     mailOptions.text = `Hey ${displayName || ''}! Welcome to ${APP_NAME}. I hope you will enjoy our service.`;
-//     await mailTransport.sendMail(mailOptions);
-//     return null;
-// });
 exports.createVacation = functions.region("europe-west1")
   .https.onCall(async (vacation, context) => {
     const uid = context.auth.uid
