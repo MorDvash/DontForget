@@ -1,6 +1,5 @@
 <template>
   <q-page class="flex column backGroundApp">
-<!--    <edit-task @trunToFalse="closeDailog" :popup="popup" style="display: none"/>-->
     <banner :title="title"/>
     <SearchBar :inputData="inputData"/>
     <transition

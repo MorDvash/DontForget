@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab9dfe95-9c11-4a79-a9fe-df5d86b25eae" name="Default Changelist" comment="dontForget">
+      <change beforePath="$PROJECT_DIR$/WeatherApp/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/firebase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherApp/src/components/Tasks/CheckBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/components/Tasks/CheckBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherApp/src/index.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/index.template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherApp/src/pages/Weather/WeatherPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/pages/Weather/WeatherPage.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1mSuZTej9PavQrxSdg7dexwdoED" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../angular/AngularProject" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WeatherApp/public" />
+      <recent name="$PROJECT_DIR$/WeatherApp/src/middleware" />
+      <recent name="$PROJECT_DIR$/WeatherApp/src/boot" />
+      <recent name="$PROJECT_DIR$/WeatherApp/src/layouts" />
+      <recent name="$PROJECT_DIR$/WeatherApp/src/i18n" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WeatherApp/src/components/LayOut" />
+      <recent name="$PROJECT_DIR$/WeatherApp/src/components/VacationsComponents" />
+      <recent name="$PROJECT_DIR$/WeatherApp/src/pages/Weather" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab9dfe95-9c11-4a79-a9fe-df5d86b25eae" name="Default Changelist" comment="" />
+      <created>1609499368781</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609499368781</updated>
+      <workItem from="1609499369927" duration="16745000" />
+      <workItem from="1609658567294" duration="178000" />
+      <workItem from="1609660439593" duration="321000" />
+      <workItem from="1609662603827" duration="209000" />
+      <workItem from="1609733959643" duration="3668000" />
+      <workItem from="1609739735099" duration="1294000" />
+      <workItem from="1609822077186" duration="20786000" />
+      <workItem from="1609913469455" duration="25492000" />
+      <workItem from="1609999286567" duration="5152000" />
+      <workItem from="1610125449123" duration="55571000" />
+      <workItem from="1610471790664" duration="1206000" />
+      <workItem from="1610525300970" duration="27000" />
+      <workItem from="1610526726823" duration="94038000" />
+      <workItem from="1610969770889" duration="15777000" />
+      <workItem from="1611037524032" duration="76976000" />
+      <workItem from="1611302929223" duration="48702000" />
+      <workItem from="1611556947489" duration="64039000" />
+      <workItem from="1611774665129" duration="57000" />
+      <workItem from="1611775468803" duration="925000" />
+      <workItem from="1611780071585" duration="2381000" />
+      <workItem from="1611819200526" duration="1071000" />
+      <workItem from="1611820970583" duration="220000" />
+      <workItem from="1611833409941" duration="1272000" />
+      <workItem from="1611834699654" duration="65000" />
+      <workItem from="1611940834466" duration="337000" />
+      <workItem from="1612172023551" duration="1563000" />
+      <workItem from="1612179990941" duration="1219000" />
+      <workItem from="1612265457619" duration="760000" />
+      <workItem from="1612268189859" duration="143000" />
+      <workItem from="1612340066965" duration="1926000" />
+      <workItem from="1612693067904" duration="602000" />
+      <workItem from="1613033286394" duration="20000" />
+      <workItem from="1613897598368" duration="201000" />
+      <workItem from="1613912759857" duration="46000" />
+      <workItem from="1614000581571" duration="5910000" />
+      <workItem from="1614538249549" duration="353000" />
+      <workItem from="1614668956570" duration="649000" />
+      <workItem from="1615129224913" duration="2341000" />
+      <workItem from="1615150835696" duration="30000" />
+      <workItem from="1615154750206" duration="638000" />
+      <workItem from="1615199342828" duration="7000" />
+      <workItem from="1615209338252" duration="6099000" />
+      <workItem from="1615224410400" duration="253000" />
+      <workItem from="1615232779779" duration="4917000" />
+      <workItem from="1615282836425" duration="92000" />
+    </task>
+    <task id="LOCAL-00001" summary="dontForget">
+      <created>1610987354898</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610987354898</updated>
+    </task>
+    <task id="LOCAL-00002" summary="dontForget">
+      <created>1611498420451</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611498420452</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dontForget">
+      <created>1611571692219</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611571692219</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dontForget">
+      <created>1611571974174</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611571974174</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit">
+      <created>1611751681150</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611751681150</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit">
+      <created>1611833487207</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611833487207</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit">
+      <created>1611833739978</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611833739978</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit">
+      <created>1611833810270</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611833810270</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit">
+      <created>1611833861835</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611833861835</updated>
+    </task>
+    <task id="LOCAL-00010" summary="commit">
+      <created>1611834621983</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611834621983</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dontForget" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
