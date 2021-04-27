@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab9dfe95-9c11-4a79-a9fe-df5d86b25eae" name="Default Changelist" comment="dontForget">
-      <change beforePath="$PROJECT_DIR$/WeatherApp/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/firebase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherApp/src/components/Tasks/CheckBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/components/Tasks/CheckBox.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherApp/src/index.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/index.template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherApp/src/pages/Weather/WeatherPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/pages/Weather/WeatherPage.vue" afterDir="false" />
-    </list>
+    <list default="true" id="ab9dfe95-9c11-4a79-a9fe-df5d86b25eae" name="Default Changelist" comment="last commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +111,7 @@
       <workItem from="1615224410400" duration="253000" />
       <workItem from="1615232779779" duration="4917000" />
       <workItem from="1615282836425" duration="92000" />
+      <workItem from="1619545630750" duration="43000" />
     </task>
     <task id="LOCAL-00001" summary="dontForget">
       <created>1610987354898</created>
@@ -187,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611834621983</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="last commit">
+      <created>1619545656596</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1619545656596</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +211,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dontForget" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="last commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
